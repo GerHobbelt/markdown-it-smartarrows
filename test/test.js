@@ -11,9 +11,9 @@
 var expect = require('chai').expect;
 
 describe('markdown-it-smartarrows', function () {
-  it('should render smart arrows', function() {
+  it('should render smart arrows', function () {
     var s, target;
-    var md = require('markdown-it')({typographer:true}).use(require('../'));
+    var md = require('@gerhobbelt/markdown-it')({ typographer:true }).use(require('../'));
 
     s = '--> <-- <--> ==> <== <==>';
     target = '<p>→ ← ↔ ⇒ ⇐ ⇔</p>\n';
@@ -25,9 +25,9 @@ describe('markdown-it-smartarrows', function () {
     expect(md.render(s)).to.equal(target);
   });
 
-  it('should properly cope with unicode spaces', function() {
+  it('should properly cope with unicode spaces', function () {
     var s, target;
-    var md = require('markdown-it')().use(require('../'));
+    var md = require('@gerhobbelt/markdown-it')().use(require('../'));
 
     // \u3000 is a unicode space character that doesn't match \s in older browsers.
     // http://www.fileformat.info/info/unicode/category/Zs/list.htm

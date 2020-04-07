@@ -1,4 +1,10 @@
 language: node_js
 node_js:
- - 'stable'
+ - 8
+ - 9
+ - 10
+ - 11
+ - 12
+ - node
 script: make test-ci
+sudo: false

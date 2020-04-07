@@ -1,0 +1,8 @@
+coverage/
+demo/
+dist/
+node_modules
+support/demo_template/sample.js
+demo/*.mjs
+benchmark/extra/
+rollup.config*.js
